@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('assets/images/registerbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+p {
+    color: #fff;
+}
+
+.wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 500px;
+    background: #232935;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: #232935;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 10px 45px 10px 20px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #ffffff;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.input-box .login__label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus + .login__label,
+.input-box input:not(:placeholder-shown) + .login__label {
+    top: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.input-box .login__eye {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.wrapper h2 {
+    color: #fff;
+}
+.wrapper .btn:hover {
+    background-color: #c18eff;
+    color: #fff;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Location Details Styles */
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box select {
+    width: 100%;
+    height: 50px;
+    background: #232935; /* Background color with opacity */
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 10px 45px 10px 20px;
+    outline: none;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path fill="%23ffffff" d="M6 6L0 0h12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+.input-box select:focus {
+    border-color: #fff;
+}
+
+.input-box select::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.input-box .login__label.select-label {
+    top: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.input-box .login__eye.select-eye {
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.input-box label.checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff; /* Change the color of the label text */
+}
+
+.input-box label.checkbox-label a {
+    color: #c18eff;
+    text-decoration: none;
+}
+
+/* Disabled Button Style */
+#registerBtn[disabled] {
+    background-color: #ccc;
+    color: #363636;
+    cursor: not-allowed;
+}
+
+#registerBtn[disabled]:hover {
+    background-color: #ccc;
+    color: #666;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.modal-content {
+    position: relative;
+    background-color: #232935;
+    margin: 10% auto;
+    padding: 20px;
+    color: #ffffff;
+    max-width: 525px;
+    border-radius: 10px;
+    
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content p {
+    text-align: justify;
+    font-size: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.warning {
+    border: 1px solid rgb(83, 1, 1);
+}
+
+.warning-msg {
+    color: rgb(83, 1, 1);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-box .login__label {
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    transform: translateY(-20%);
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus + .login__label,
+.input-box input:not(:placeholder-shown) + .login__label {
+    top: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.input-box .login__eye {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box .login__eye:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.address p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.address h2, p {
+    display: inline; /* This makes both <h2> and <p> inline elements */
+    margin: 0; /* Removes any default margin */
+}
+
+/* Responsive Phone Number Input Styles */
+@media (max-width: 460px) {
+    .input-box #phone {
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+#password.error,
+#confirm_password.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+#email.error {
+    border-color: red;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+.notification-modal {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    height: flex;
+}
+
+.modal-content {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.orange-border {
+    border: 1px solid orange !important;
+}
+
+
